@@ -38,7 +38,7 @@ jobs:
        aws-region: us-east-1
 
     - name: Terraform automation
-      uses: jvo5610/terraform-pr-automation@v0.1.0
+      uses: jvo5610/terraform-pr-automation@v0.1.3
       with:
         LOG_LEVEL: DEBUG
         IAC_TOOL: TERRAFORM
