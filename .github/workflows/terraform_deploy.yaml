@@ -30,6 +30,13 @@ jobs:
       if: env.is_issue_comment == 'false'
       uses: actions/checkout@v3
 
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+       role-to-assume: arn:aws:iam::354040364707:role/github-oidc-provider-aws
+       role-session-name: rolesession
+       aws-region: us-east-1
+
     - name: Terraform automation
       uses: jvo5610/terraform-pr-automation@v0.1.0
       with:
