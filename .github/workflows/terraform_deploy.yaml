@@ -1,8 +1,6 @@
 name: Terraform automation
 on:
-  push:
-    branches:
-      - main
+  pull_request:
   workflow_dispatch:
   issue_comment:
     types: [created]
@@ -16,7 +14,7 @@ permissions:
 jobs:
   terraform_automation:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Check event_type
       id: check_event_type
