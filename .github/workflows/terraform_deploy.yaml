@@ -44,3 +44,4 @@ jobs:
         IAC_TOOL: TERRAFORM
         EXCLUDED_DIRNAMES: '[".github", ".modules"]'
         REVIEW_REQUIRED: true
+        
